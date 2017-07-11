@@ -1,0 +1,118 @@
+# ------------------------------------------------------
+# 
+#    Config file for "Extract_Orders.py" and 
+#    "Extract_Orders_from_polyfile"
+#
+# ------------------------------------------------------
+#
+#   Note: Comment variables out with a '#' to use the default
+#   value (set in code)
+#
+#   Note: Any command line arguments will override these values
+#
+#   Note: any white spaces will be removed
+#
+#   Note: do not use any quotation or double quotation marks
+#
+#
+
+# ------------------------------------------------------
+# string location the root folder from which all other paths are derived from leave as '/' to use full paths
+# ------------------------------------------------------
+# root = /local/home/ncook/Projects/Side-Project-Hugh/Stage2/
+root = /
+
+
+# ------------------------------------------------------
+# string location of the folder containing fits files to extract
+# ------------------------------------------------------
+filepath = /Astro/Projects/Hughs_Work/Data/data_EXOhSPEC/20170630_Flats/
+
+
+# ------------------------------------------------------
+# string, location of place to save plots
+# ------------------------------------------------------
+plotpath = /Astro/Projects/Hughs_Work/Plots/data_EXOhSPEC/20170630_Flats/
+
+
+# ------------------------------------------------------
+# string, location to save extracted order fits files
+# ------------------------------------------------------
+savepath = /Astro/Projects/Hughs_Work/Data/data_EXOhSPEC/20170630_Flats_reduced/
+
+
+# ------------------------------------------------------
+# string, location to load the polynomial fits from
+#    use Extract_orders_from_polyfits  to run from previous fit
+# ------------------------------------------------------
+polypath = /Astro/Projects/Hughs_Work/Data/data_EXOhSPEC/20170630_Flats_reduced/
+
+
+# ------------------------------------------------------
+# string, file to save polynomials fits file to
+#    will be created in: (in $save path$/$input file$/ ) by Extract_Orders
+#    use Extract_orders_from_polyfits  to run from previous fit
+# ------------------------------------------------------
+poly_fits_file = All_saved_polynomials.fits
+
+
+# ------------------------------------------------------
+# files (please separate file names by commas, include extension)
+# ------------------------------------------------------
+files = exo-0001_FLAT_8s.fit
+
+
+# ------------------------------------------------------
+# string, direction of the orders
+#		If 'horizontal' or 'H' or 'h' then orders are
+#		assumed to increase along the x axis
+#		If 'vertical' or 'V' or 'v' then orders are
+#		assumed to increase along the y axis
+# ------------------------------------------------------
+order_direction = h
+
+# ------------------------------------------------------
+# float, blur pixels in wavelength direction (to aid finding orders)
+# ------------------------------------------------------
+xblur = 96
+
+
+# ------------------------------------------------------
+# float, blur pixels in order direction (to aid finding orders)
+# ------------------------------------------------------
+yblur = 2
+
+
+# ------------------------------------------------------
+# float, percentile to remove background pixels at greats a mask of pixels to fit and not to fit
+# ------------------------------------------------------
+pcut = 60 
+
+
+# ------------------------------------------------------
+# int, lowest order polynomial to fit
+# ------------------------------------------------------
+fitmin = 1 
+
+
+# ------------------------------------------------------
+# int, highest order polynomial to fit
+# ------------------------------------------------------
+fitmax = 4
+
+
+# ------------------------------------------------------
+# int, number of pixels to use for width of each order
+# ------------------------------------------------------
+width = 5
+
+
+# ------------------------------------------------------
+# minimum number of pixels to use order (else it is discarded as noise/unusable)
+# ------------------------------------------------------
+minpixelsinorder = 1000
+
+
+# ------------------------------------------------------
+# End of file
+# ------------------------------------------------------
