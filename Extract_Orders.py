@@ -64,7 +64,7 @@ DPARAMS['width'] = 10     # number of pixels to use for width of each order
 DPARAMS['minpixelsinorder'] = 10000  # minimum number of pixels to use order
                                      # (else it is discarded as noise/unusable)
 
-GUI = False
+GUI = True
 
 # =============================================================================
 # Start of code
@@ -127,6 +127,8 @@ if __name__ == "__main__":
             print('\n\t Allowing user to remove orders...')
             cond = ne.run_remove_orders(im1, polyfits, xlows, xhighs, regions,
                                         userinput=GUI)
+            if not GUI:
+                cond = True
         # ---------------------------------------------------------------------
         ne.cmdtitle('Fitting complete')
         # ---------------------------------------------------------------------
